@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <script>
+    window.onload = () => {
+        // Click event for menu hamburger button
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        mobileMenuButton.addEventListener('click', () => {
+            if (mobileMenuButton.classList.contains("open")) {
+                mobileMenuButton.classList.remove("open");                
+            } else {
+                mobileMenuButton.classList.add("open")
+            }
+        })
+    }
+  </script>
+</head>
+<body>
+    <main class="max-w-screen-lg mx-auto">
+        <header>
+            <nav class="flex items-center z-50 justify-between px-4 lg:px-0 mt-4 h-20 bg-white">
+                <div>
+                    <img src="./assets/logo.png" width="30" alt="Logo" />
+                </div>
+                <div class="flex flex-1 justify-end gap-20">
+                    <!-- Nav links starts -->
+                    <div class="hidden items-center md:flex">
+                        <ul class="flex gap-8 text-lg">
+                            <li class="hover:text-sky-300 transition-colors cursor-pointer">How it works</li>
+                            <li class="hover:text-sky-300 transition-colors cursor-pointer">Payment</li>
+                            <li class="hover:text-sky-300 transition-colors cursor-pointer">Help</li>
+                            <li class="hover:text-sky-300 transition-colors cursor-pointer">Blog</li>
+                        </ul>
+                    </div>
+                    <!-- Nav links ends -->
+                    <!-- Nav buttons starts -->
+                    <div class="hidden items-center md:flex justify-center gap-8">
+                        <button type="button" class="border border-black py-1 px-4 rounded-2xl hover:bg-black hover:text-white transition-colors">Sign up</button>
+                        <button type="button" class="bg-black text-white px-4 border border-black py-1 rounded-2xl hover:bg-white hover:text-black transition-colors">Log in</button>
+                    </div>
+                    <!-- Nav buttons ends -->
+                </div>
+                    <!-- Mobile nav starts -->
+                    <div class="md:hidden z-10 bg-white">                        
+                        <!-- Mobile burger icon starts -->
+                        <div id="mobile-menu-button" class="group peer">
+                            <div class="relative h-1 w-8 bg-black top-0 rounded-full group-open:rotate-45 transition-all group-open:top-2"></div>
+                            <div class="h-1 w-8 mt-1 bg-black rounded-full group-open:opacity-0 transition-all"></div>
+                            <div class="relative h-1 w-8 mt-1 top-0 bg-black rounded-full group-open:-rotate-45 transition-all group-open:-top-2"></div>
+                        </div>
+                        <!-- Mobile burger icon ends -->
+                            <!-- Mobile links starts -->
+                            <div class="peer-open:block hidden md:hidden text-center absolute z-10 top-24 left-0 w-full py-6 bg-white">
+                                <div class="flex flex-col gap-4 text-lg">
+                                    <div class="transition-colors cursor-pointer h-full py-3 hover:bg-zinc-200">How it works</div>
+                                    <div class="transition-colors cursor-pointer h-full py-3 hover:bg-zinc-200">Payment</div>
+                                    <div class="transition-colors cursor-pointer h-full py-3 hover:bg-zinc-200">Help</div>
+                                    <div class="transition-colors cursor-pointer h-full py-3 hover:bg-zinc-200">Blog</div>
+                                    <div class="flex items-center justify-center mt-6 gap-8">
+                                        <button type="button" class="border border-black py-1 px-4 rounded-2xl hover:bg-black hover:text-white transition-colors">Sign up</button>
+                                        <button type="button" class="bg-black text-white px-4 border border-black py-1 rounded-2xl hover:bg-white hover:text-black transition-colors">Log in</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile links starts -->
+                    </div>
+                    <!-- Mobile nav ends -->
+            </nav>
+            <section id="hero" class="w-full h-full md:h-[550px] flex flex-col md:flex-row items-center justify-center pl-0 md:pl-4 lg:pl-0 mt-6">
+                <!-- CTA starts -->
+                <div class="w-full md:w-[42%] h-full flex flex-col gap-4 justify-center items-center md:items-start">
+                  <h1 class="flex flex-col gap-1 items-center md:items-start text-5xl lg:text-6xl font-extrabold">
+                    <span>Make Your</span>
+                    <span class="">Payment More</span>
+                    <span>Secure</span>
+                </h1>
+                <p class="text-base lg:text-lg text-zinc-500 mb-6 text-balance text-center md:text-start">Protect your sensitive information and prevent unauthorized access by implementing additional security measures for your payment methods.</p>
+                <button type="button" class="bg-gradient-to-r from-purple-400 to-yellow-300 py-2 px-8 text-white text-2xl font-bold rounded-xl transition-colors hover:shadow-2xl hover:shadow-purple-500/40">Get Started</button>
+                </div>
+                <!-- CTA ends -->
+                <!-- Hero image starts -->
+                <div class="hidden md:flex w-full md:w-[58%] h-full">
+                    <img src="./assets/hero.png" class="h-full w-[500px] md:w-[570px] lg:w-full -mr-8">
+                </div>
+                <!-- Hero image ends -->
+                <!--  -->
+                <div class="block md:hidden w-full h-full">
+                    <img src="./assets/hero-mobile.png" class="h-full w-full md:w-[570px] lg:w-full -mr-8">
+                </div>
+                <!--  -->
+            </section>
+        </header>
+    </main>
+</body>
+</html>
